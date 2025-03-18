@@ -3,18 +3,8 @@ package utils
 import (
 	"bufio"
 	"fmt"
-	"io"
 	"os"
 )
-
-func GetStandardInput() ([]byte, error) {
-	data, err := io.ReadAll(os.Stdin)
-	if err != nil {
-		return nil, err
-	}
-
-	return data, nil
-}
 
 func ParseTextFromStandardIn() ([]string, error) {
 	if !IsInputPiped() {
