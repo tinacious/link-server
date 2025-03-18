@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDYwIDYwIj48cmVjdCB3aWR0aD0iNTgiIGhlaWdodD0iNTgiIHg9IjEiIHk9IjEiIGZpbGw9InVybCgjYSkiIHJ4PSI1Ii8+PHJlY3Qgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiB4PSIxIiB5PSIxIiBzdHJva2U9IiMzM0Q1RkYiIHN0cm9rZS13aWR0aD0iMiIgcng9IjUiLz48cGF0aCBmaWxsPSIjRjM5IiBkPSJNMzQuNjkgMjQuMzExYzMuOTY3IDMuOTcyIDMuOTEyIDEwLjM0LjAyMyAxNC4yNWwtLjAyNC4wMjUtNC40NjIgNC40NjJjLTMuOTM2IDMuOTM2LTEwLjM0IDMuOTM2LTE0LjI3NSAwLTMuOTM2LTMuOTM1LTMuOTM2LTEwLjM0IDAtMTQuMjc0bDIuNDY0LTIuNDY0Yy42NTMtLjY1NCAxLjc3OS0uMjIgMS44MTMuNzA0YTEyLjIzIDEyLjIzIDAgMCAwIC42NDMgMy41IDEuMDcgMS4wNyAwIDAgMS0uMjUxIDEuMTA0bC0uODcuODdjLTEuODYgMS44Ni0xLjkxOSA0Ljg5LS4wNzYgNi43N2E0Ljc4NiA0Ljc4NiAwIDAgMCA2Ljc5NS4wMzRsNC40NjMtNC40NjJhNC43OCA0Ljc4IDAgMCAwLS42ODctNy4zMzEgMS4wNjUgMS4wNjUgMCAwIDEtLjQ2MS0uODM3IDIuNjQ1IDIuNjQ1IDAgMCAxIC43NzYtMS45OGwxLjM5OC0xLjM5OGExLjA2NyAxLjA2NyAwIDAgMSAxLjM2Ny0uMTE1Yy40ODcuMzQuOTQzLjcyMiAxLjM2MyAxLjE0MlptOS4zNTgtOS4zNmMtMy45MzUtMy45MzUtMTAuMzM5LTMuOTM1LTE0LjI3NSAwbC00LjQ2MiA0LjQ2M2EuNzgxLjc4MSAwIDAgMC0uMDI0LjAyNWMtMy44OSAzLjkxLTMuOTQ0IDEwLjI3OC4wMjQgMTQuMjUuNDIuNDIuODc2LjgwMiAxLjM2MyAxLjE0Mi40MjUuMjk2IDEgLjI1MSAxLjM2Ny0uMTE1bDEuMzk4LTEuMzk4YTIuNjQ1IDIuNjQ1IDAgMCAwIC43NzYtMS45OCAxLjA2NCAxLjA2NCAwIDAgMC0uNDYtLjgzNyA0Ljc4IDQuNzggMCAwIDEtLjY4Ny03LjMzMWw0LjQ2Mi00LjQ2MmE0Ljc4NyA0Ljc4NyAwIDAgMSA2Ljc5NS4wMzRjMS44NDMgMS44OCAxLjc4NCA0LjkxLS4wNzcgNi43N2wtLjg2OS44N2ExLjA2OSAxLjA2OSAwIDAgMC0uMjUxIDEuMTAzYy4zOSAxLjE0Mi42IDIuMzI0LjY0MyAzLjUwMS4wMzQuOTI0IDEuMTYgMS4zNTggMS44MTMuNzA0bDIuNDY0LTIuNDY0YzMuOTM2LTMuOTM1IDMuOTM2LTEwLjM0IDAtMTQuMjc0WiIvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjMwIiB4Mj0iMzAiIHkxPSIwIiB5Mj0iNjAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMkMyQzNGIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNzQzRjg0Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PC9zdmc+" />
+  <title>🔗 link-server</title>
+  <style>
+    :root {
+      --background-color: #ec028c;
+      --background-gradient: linear-gradient(180deg, #ec028c, #ff965e, #ec028c);
+      --card-background: rgba(255, 255, 255, 0.8);
+      --text-color: #000;
+      --link-color: #d3027d;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background-color: #2c2c3f;
+        --background-gradient: linear-gradient(180deg, #2c2c3f, #743f84, #2c2c3f);
+        --card-background: rgba(0, 0, 0, 0.55);
+        --text-color: #fff;
+        --link-color: #f39;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      background-image: var(--background-gradient);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      line-height: 1.4;
+      color: var(--text-color);
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card-background);
+      padding: 20px;
+      word-break: break-word;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    a {
+      color: var(--link-color);
+      font-weight: 700;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    {{range .Links}}
+    <div class="card">
+      <a href="{{.}}">{{.}}</a>
+    </div>
+    {{end}}
+  </div>
+
+</body>
+
+</html>
