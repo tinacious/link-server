@@ -7,6 +7,8 @@
   - [Install using Go](#install-using-go)
   - [Install manually](#install-manually)
 - [Usage](#usage)
+  - [Links from file](#links-from-file)
+  - [Links from data piped from standard input](#links-from-data-piped-from-standard-input)
   - [Custom port](#custom-port)
 - [Uninstall](#uninstall)
 
@@ -16,6 +18,13 @@
 - No external dependencies are used. The project leverages native Go packages only.
 - No external runtime dependencies. Some CLI tools require you to have a specific version of Node.js, Python or another language, this does not.
 - Multi-platform: Thanks to Go, this works on macOS, Windows and Linux
+
+<table>
+<tr>
+  <td><img src="screenshots/theme-light.png" /></td>
+  <td><img src="screenshots/theme-dark.png" /></td>
+</tr>
+</table>
 
 
 ## Installation
@@ -41,6 +50,8 @@ On macOS, you will need to trust the executable after the first run attempt in y
 
 ## Usage
 
+### Links from file
+
 Run the `link-server` command with the path of the file with links on each line as the first and only argument:
 
 ```sh
@@ -49,6 +60,17 @@ link-server my-deep-links.txt
 ```
 
 This should serve the links on a random port.
+
+
+### Links from data piped from standard input
+
+You can also pipe links to `link-server`, one link on each line. Here's an example that fetches links from an API endpoint and then pipes it to `link-server`:
+
+```sh
+curl -s https://tinaciousdesign.com/api/technologies |
+  jq -r '"https://tinaciousdesign.com/services/technologies/" + .data[].slug' |
+  PORT=8621 link-server
+```
 
 
 ### Custom port
