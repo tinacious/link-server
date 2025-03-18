@@ -19,6 +19,13 @@
 - No external runtime dependencies. Some CLI tools require you to have a specific version of Node.js, Python or another language, this does not.
 - Multi-platform: Thanks to Go, this works on macOS, Windows and Linux
 
+<table>
+<tr>
+  <td><img src="screenshots/theme-light.png" /></td>
+  <td><img src="screenshots/theme-dark.png" /></td>
+</tr>
+</table>
+
 
 ## Installation
 
