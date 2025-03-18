@@ -25,18 +25,17 @@ func main() {
 		}
 	}
 
-	// Path to file
-	filePath := os.Args[1]
-	if filePath == "" {
-		fmt.Println("must provide path to file")
+	var validInput bool = false
+	if utils.IsInputPiped() || len(os.Args) > 1 {
+		validInput = true
+	}
+
+	if !validInput {
+		fmt.Println("must provide path to file or pipe data from standard in")
 		os.Exit(1)
 	}
 
-	// Links from file
-	links, err := utils.ParseLinksFromFile(filePath)
-	if err != nil {
-		panic(err)
-	}
+	links, err := getInput()
 
 	fmt.Printf("🔗 links server at: http://localhost:%d with links:\n%s\n", port, strings.Join(links, "\n"))
 
@@ -50,4 +49,17 @@ func main() {
 	})
 
 	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
+}
+
+func getInput() ([]string, error) {
+	if utils.IsInputPiped() {
+		return utils.ParseTextFromStandardIn()
+	}
+
+	filePath := os.Args[1]
+	if filePath == "" {
+		fmt.Println("must provide path to file")
+		os.Exit(1)
+	}
+	return utils.ParseLinksFromFile(filePath)
 }
